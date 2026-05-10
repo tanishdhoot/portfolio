@@ -26,4 +26,31 @@ export const projects: Project[] = [
     stack: ["Next.js", "Firebase", "Razorpay", "Realtime"],
     status: "live",
   },
+  {
+    name: "Arthwealth",
+    tagline: "Wealth management, reimagined",
+    description:
+      "A modern wealth management surface — portfolio aggregation, goal tracking, and clean data visualisation for Indian investors.",
+    url: "https://arthwealth-app.vercel.app",
+    stack: ["Next.js", "TypeScript", "Charts"],
+    status: "live",
+  },
+  {
+    name: "Netflix Portfolio",
+    tagline: "A personal digital CV — Netflix style",
+    description:
+      "An experimental take on the personal site: my career browsed like a streaming catalog. Roles, projects, and writing as titles you can browse.",
+    url: "https://github.com/tanishdhoot/Personal-Website",
+    stack: ["React", "SPA", "Animation"],
+    status: "wip",
+  },
+  {
+    name: "Savour",
+    tagline: "Native Android app",
+    description:
+      "An Android app with a Vercel-hosted API backend. Built for mobile-first interactions and quick capture flows.",
+    url: "https://github.com/tanishdhoot",
+    stack: ["Android", "Kotlin", "REST API", "Vercel"],
+    status: "wip",
+  },
 ];
