@@ -14,6 +14,12 @@ export function Footer() {
 
           <nav className="flex items-center gap-5">
             <a
+              href="/blog"
+              className="hover:text-gold transition-colors"
+            >
+              blog
+            </a>
+            <a
               href="https://github.com/tanishdhoot"
               target="_blank"
               rel="noopener noreferrer"

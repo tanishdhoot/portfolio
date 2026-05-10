@@ -52,6 +52,13 @@ export function Hero() {
           </a>
           <span className="text-border">|</span>
           <a
+            href="/blog"
+            className="hover:text-gold transition-colors"
+          >
+            blog
+          </a>
+          <span className="text-border">|</span>
+          <a
             href="mailto:tanish.dhoot98@gmail.com"
             className="hover:text-gold transition-colors"
           >
