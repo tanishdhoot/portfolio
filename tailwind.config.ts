@@ -9,8 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        bg: "#0a0a0a",
+        surface: "#111111",
+        border: "#1f1f1f",
+        ink: "#e8e6e1",
+        muted: "#7a7670",
+        gold: "#C9A84C",
+        "gold-dim": "#8a7434",
+      },
+      fontFamily: {
+        sans: ["var(--font-geist-sans)", "ui-sans-serif", "system-ui"],
+        mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
+      },
+      letterSpacing: {
+        tightest: "-0.04em",
       },
     },
   },
