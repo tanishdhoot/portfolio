@@ -1,11 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tanishdoesdumbstuff.in"),
-  title: "Tanish — building at the intersection of finance and code",
+  title: {
+    default: "Tanish — building at the intersection of finance and code",
+    template: "%s · Tanish",
+  },
   description:
     "Tanish, based in Pune. Fintech, algorithmic trading, and full-stack engineering. Currently shipping Axiom Alpha and HireCraft.",
   openGraph: {
@@ -15,6 +19,13 @@ export const metadata: Metadata = {
     url: "https://tanishdoesdumbstuff.in",
     siteName: "tanishdoesdumbstuff",
     type: "website",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tanish",
+    description:
+      "Building things at the intersection of finance and code. Pune, India.",
   },
   robots: { index: true, follow: true },
 };
@@ -37,6 +48,7 @@ export default function RootLayout({
     >
       <body className="font-sans bg-bg text-ink min-h-screen antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );

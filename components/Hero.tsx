@@ -1,3 +1,5 @@
+import { now, cal } from "@/lib/now";
+
 export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-border">
@@ -40,7 +42,31 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="mt-12 flex items-center gap-4 font-mono text-xs uppercase tracking-[0.18em] text-muted">
+        <div className="mt-10 max-w-xl rounded-sm border border-border bg-surface/40 px-5 py-4">
+          <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+            <span className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
+              <span className="text-gold">currently</span>
+            </span>
+            <span>{now.updated}</span>
+          </div>
+          <p className="mt-2 text-[15px] text-ink/90 leading-snug">
+            {now.text}
+          </p>
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-3 font-mono text-xs uppercase tracking-[0.18em] text-muted">
+          <a
+            href={cal.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 rounded-sm border border-gold/60 bg-gold/10 px-4 py-2 text-gold hover:bg-gold hover:text-bg transition-colors"
+          >
+            <span>{cal.label}</span>
+            <span className="transition-transform group-hover:translate-x-0.5">
+              →
+            </span>
+          </a>
           <a
             href="#work"
             className="group inline-flex items-center gap-2 text-ink hover:text-gold transition-colors"
@@ -62,7 +88,7 @@ export function Hero() {
             href="mailto:tanish.dhoot98@gmail.com"
             className="hover:text-gold transition-colors"
           >
-            get in touch
+            email
           </a>
         </div>
       </div>
