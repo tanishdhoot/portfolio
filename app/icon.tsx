@@ -11,15 +11,15 @@ export default function Icon() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#0a0a0a",
-          color: "#C9A84C",
+          background: "#F6F0E3",
+          color: "#211D14",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           fontSize: 22,
           fontWeight: 700,
-          fontFamily: "ui-monospace, monospace",
-          borderRadius: 6,
+          fontFamily: "Georgia, serif",
+          border: "2px solid #211D14",
         }}
       >
         T

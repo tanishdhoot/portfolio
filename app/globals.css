@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -11,45 +11,71 @@ html {
 }
 
 body {
-  background-color: #0a0a0a;
-  color: #e8e6e1;
+  background-color: #f6f0e3;
+  color: #211d14;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
+/* faint paper grain */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.35;
+  background-image: radial-gradient(
+    rgba(33, 29, 20, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 4px 4px;
+  mix-blend-mode: multiply;
+}
+
 ::selection {
-  background-color: #C9A84C;
-  color: #0a0a0a;
+  background-color: #9a7b2d;
+  color: #f6f0e3;
 }
 
 *:focus-visible {
-  outline: 1px solid #C9A84C;
+  outline: 2px solid #9a7b2d;
   outline-offset: 3px;
-  border-radius: 2px;
 }
 
-@keyframes blink {
-  0%, 49% { opacity: 1; }
-  50%, 100% { opacity: 0; }
+/* newspaper double rule */
+.rule-double {
+  border-top: 3px double #211d14;
 }
 
-.cursor-blink {
-  display: inline-block;
-  width: 0.55ch;
-  height: 0.85em;
-  background-color: #C9A84C;
-  margin-left: 0.15em;
-  vertical-align: -0.05em;
-  animation: blink 1.1s steps(1) infinite;
+.rule-thick {
+  border-top: 2px solid #211d14;
 }
 
-.dot-grid {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 22px 22px;
+.rule-hair {
+  border-top: 1px solid #d8ccb0;
+}
+
+/* editorial drop cap */
+.drop-cap::first-letter {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 600;
+  font-size: 3.4em;
+  float: left;
+  line-height: 0.82;
+  padding-right: 0.12em;
+  padding-top: 0.06em;
+  color: #9a7b2d;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
   }
 }

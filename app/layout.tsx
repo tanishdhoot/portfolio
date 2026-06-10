@@ -1,19 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { GeistSans } from "geist/font/sans";
+import { Fraunces } from "next/font/google";
 import { GeistMono } from "geist/font/mono";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  variable: "--font-fraunces",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://tanishdoesdumbstuff.in"),
   title: {
-    default: "Tanish — building at the intersection of finance and code",
-    template: "%s · Tanish",
+    default: "Tanish Dhoot — finance × code, printed from Pune",
+    template: "%s · Tanish Dhoot",
   },
   description:
-    "Tanish, based in Pune. Fintech, algorithmic trading, and full-stack engineering. Currently shipping Axiom Alpha and HireCraft.",
+    "Tanish Dhoot, Pune. Fintech, algorithmic trading, and full-stack engineering. Currently shipping Axiom Alpha and HireCraft.",
   openGraph: {
-    title: "Tanish",
+    title: "Tanish Dhoot",
     description:
       "Building things at the intersection of finance and code. Pune, India.",
     url: "https://tanishdoesdumbstuff.in",
@@ -23,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tanish",
+    title: "Tanish Dhoot",
     description:
       "Building things at the intersection of finance and code. Pune, India.",
   },
@@ -31,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0a",
+  themeColor: "#F6F0E3",
   width: "device-width",
   initialScale: 1,
 };
@@ -42,11 +48,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable}`}
-    >
-      <body className="font-sans bg-bg text-ink min-h-screen antialiased">
+    <html lang="en" className={`${fraunces.variable} ${GeistMono.variable}`}>
+      <body className="font-serif bg-paper text-ink min-h-screen antialiased">
         {children}
         <Analytics />
       </body>

@@ -9,20 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0a0a0a",
-        surface: "#111111",
-        border: "#1f1f1f",
-        ink: "#e8e6e1",
-        muted: "#7a7670",
-        gold: "#C9A84C",
-        "gold-dim": "#8a7434",
+        paper: "#F6F0E3",
+        "paper-deep": "#EFE7D2",
+        ink: "#211D14",
+        faint: "#75695A",
+        rule: "#D8CCB0",
+        gold: "#9A7B2D",
+        "gold-deep": "#6F5719",
+        up: "#1E7A4E",
+        down: "#A63A2E",
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "ui-sans-serif", "system-ui"],
+        serif: ["var(--font-fraunces)", "Georgia", "serif"],
         mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
       },
       letterSpacing: {
         tightest: "-0.04em",
+        caps: "0.18em",
       },
     },
   },

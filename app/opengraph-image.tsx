@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Tanish — building at the intersection of finance and code";
+export const alt = "Tanish Dhoot — finance × code, printed from Pune";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -12,88 +12,65 @@ export default async function OpengraphImage() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#0a0a0a",
-          color: "#e8e6e1",
+          background: "#F6F0E3",
+          color: "#211D14",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "72px 80px",
-          fontFamily: "system-ui, -apple-system, sans-serif",
-          position: "relative",
+          padding: "56px 72px",
+          fontFamily: "Georgia, serif",
         }}
       >
         <div
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            height: 320,
-            background:
-              "radial-gradient(60% 100% at 50% 0%, rgba(201, 168, 76, 0.18) 0%, transparent 70%)",
             display: "flex",
-          }}
-        />
-
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 12,
-            fontSize: 22,
+            justifyContent: "space-between",
+            borderTop: "3px solid #211D14",
+            paddingTop: 14,
+            fontSize: 20,
             fontFamily: "ui-monospace, monospace",
-            color: "#7a7670",
+            color: "#75695A",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
           }}
         >
-          <span style={{ color: "#C9A84C" }}>~</span>
-          <span>tanish</span>
-          <span style={{ color: "rgba(201,168,76,0.6)" }}>@</span>
-          <span>pune</span>
+          <span>Pune Edition</span>
+          <span>Vol. 01 · No. 02</span>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            flex: 1,
+            justifyContent: "center",
+            gap: 28,
+          }}
+        >
           <div
             style={{
-              fontSize: 168,
+              fontSize: 140,
               fontWeight: 700,
-              letterSpacing: "-0.05em",
-              lineHeight: 0.95,
-              display: "flex",
-              alignItems: "center",
-              color: "#e8e6e1",
+              letterSpacing: "-0.04em",
+              lineHeight: 1,
             }}
           >
-            Tanish
-            <span
-              style={{
-                display: "inline-block",
-                width: 18,
-                height: 110,
-                background: "#C9A84C",
-                marginLeft: 18,
-                marginTop: 24,
-              }}
-            />
+            Tanish Dhoot
           </div>
-
           <div
             style={{
-              fontSize: 38,
-              color: "rgba(232, 230, 225, 0.92)",
-              maxWidth: 980,
-              lineHeight: 1.2,
+              fontSize: 24,
+              fontFamily: "ui-monospace, monospace",
+              color: "#75695A",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
               display: "flex",
-              flexWrap: "wrap",
-              gap: "0 12px",
+              gap: 14,
             }}
           >
-            <span>Building things at the intersection of</span>
-            <span style={{ color: "#C9A84C" }}>finance</span>
-            <span>and</span>
-            <span style={{ color: "#C9A84C" }}>code</span>
-            <span>.</span>
+            <span>Finance</span>
+            <span style={{ color: "#9A7B2D" }}>×</span>
+            <span>Code</span>
           </div>
         </div>
 
@@ -101,10 +78,11 @@ export default async function OpengraphImage() {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center",
+            borderTop: "4px double #211D14",
+            paddingTop: 14,
             fontSize: 20,
             fontFamily: "ui-monospace, monospace",
-            color: "#7a7670",
+            color: "#75695A",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
           }}
@@ -116,7 +94,7 @@ export default async function OpengraphImage() {
                 width: 10,
                 height: 10,
                 borderRadius: 999,
-                background: "#C9A84C",
+                background: "#9A7B2D",
                 display: "block",
               }}
             />
