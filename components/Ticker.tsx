@@ -11,10 +11,8 @@ function TickItem({ tick }: { tick: MarketTick }) {
   const isUp = tick.change >= 0;
   return (
     <div className="flex items-center gap-2 shrink-0">
-      <span className="text-faint">{tick.label}</span>
-      <span className="text-ink tabular-nums font-medium">
-        {formatPrice(tick)}
-      </span>
+      <span className="text-muted">{tick.label}</span>
+      <span className="text-ink tabular-nums">{formatPrice(tick)}</span>
       <span
         className={`${isUp ? "text-up" : "text-down"} tabular-nums flex items-center gap-1`}
       >
@@ -33,18 +31,21 @@ export async function Ticker() {
   if (ticks.length === 0) return null;
 
   return (
-    <section aria-label="Live market data" className="mx-auto max-w-5xl px-6">
-      <div className="border-b border-rule py-2.5">
+    <section
+      aria-label="Live market data"
+      className="border-b border-border bg-surface/40 backdrop-blur-sm"
+    >
+      <div className="mx-auto max-w-6xl px-6 py-3">
         <div className="flex items-center gap-6 font-mono text-[11px] uppercase tracking-caps overflow-x-auto scrollbar-none">
           <span className="flex items-center gap-2 text-gold shrink-0">
             <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
-            <span>Markets</span>
+            <span>live</span>
           </span>
           {ticks.map((t) => (
             <TickItem key={t.label} tick={t} />
           ))}
-          <span className="ml-auto text-faint/70 shrink-0 hidden sm:inline normal-case tracking-normal">
-            Yahoo Finance · 2m delay
+          <span className="ml-auto text-muted/60 shrink-0 hidden sm:inline">
+            yahoo finance · 2m cache
           </span>
         </div>
       </div>

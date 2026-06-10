@@ -11,15 +11,16 @@ export default function Icon() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#F6F0E3",
-          color: "#211D14",
+          background: "#050505",
+          color: "#D4AF37",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           fontSize: 22,
           fontWeight: 700,
           fontFamily: "Georgia, serif",
-          border: "2px solid #211D14",
+          borderRadius: 8,
+          border: "1px solid #6e5a1e",
         }}
       >
         T

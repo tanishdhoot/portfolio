@@ -1,91 +1,111 @@
-import { now, cal } from "@/lib/now";
+"use client";
+
+import { useEffect, useState } from "react";
+import { MarketCanvas } from "./MarketCanvas";
+import { Magnetic } from "./Magnetic";
+
+const NAME = "TANISH";
+const ROLES = ["engineer", "trader", "designer", "builder"];
+
+function RotatingRole() {
+  const [index, setIndex] = useState(0);
+  const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const interval = setInterval(() => {
+      setShow(false);
+      setTimeout(() => {
+        setIndex((i) => (i + 1) % ROLES.length);
+        setShow(true);
+      }, 320);
+    }, 2600);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <span
+      className={`inline-block font-serif italic text-gold-bright transition-all duration-300 ease-out-expo ${
+        show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+      }`}
+    >
+      {ROLES[index]}
+    </span>
+  );
+}
 
 export function Hero() {
   return (
-    <section className="mx-auto max-w-5xl px-6 pt-12 sm:pt-16 pb-14 sm:pb-20">
-      <div className="grid gap-10 lg:grid-cols-[1.6fr_1fr] lg:gap-14">
-        {/* lead story */}
-        <div>
-          <p className="font-mono text-[11px] uppercase tracking-caps text-gold">
-            The Lead Story
-          </p>
-          <h2 className="mt-4 text-4xl sm:text-6xl font-semibold tracking-tightest leading-[1.02] text-balance">
-            Building things at the intersection of{" "}
-            <em className="font-light">finance</em> &{" "}
-            <em className="font-light">code</em>.
-          </h2>
+    <section className="relative min-h-[92vh] flex flex-col justify-center overflow-hidden border-b border-border">
+      <MarketCanvas />
+      <div
+        className="absolute inset-x-0 top-0 h-96 pointer-events-none opacity-[0.08]"
+        style={{
+          background:
+            "radial-gradient(60% 100% at 50% 0%, #D4AF37 0%, transparent 70%)",
+        }}
+      />
 
-          <div className="mt-8 max-w-xl space-y-5 text-[17px] leading-relaxed text-ink/85">
-            <p className="drop-cap">
-              Full-stack engineer from Pune with a focus on fintech and
-              algorithmic trading. Previously at Smallcase, helping shape how
-              Indians invest. The family runs Dhoot Trading — gold has been the
-              household commodity for decades, so markets were dinner-table
-              conversation long before they were a career.
-            </p>
-            <p>
-              These days I ship small, sharp products that sit somewhere
-              between markets, software, and design.
-            </p>
-          </div>
+      <div className="relative mx-auto w-full max-w-6xl px-6 pt-28 pb-20">
+        <p className="font-mono text-xs uppercase tracking-caps text-muted">
+          <span className="text-gold">01</span> — Pune, India ·{" "}
+          <RotatingRole />
+        </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href={cal.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 border-2 border-ink px-5 py-2.5 font-mono text-[11px] uppercase tracking-caps text-ink hover:bg-ink hover:text-paper transition-colors"
+        <h1
+          className="mt-6 font-semibold tracking-tightest leading-[0.88] text-[clamp(4.5rem,16vw,13rem)] select-none"
+          aria-label={NAME}
+        >
+          {NAME.split("").map((char, i) => (
+            <span
+              key={i}
+              aria-hidden="true"
+              className="letter"
+              style={{ "--d": `${0.06 * i + 0.2}s` } as React.CSSProperties}
             >
-              <span>{cal.label}</span>
-              <span className="transition-transform group-hover:translate-x-0.5">
-                →
-              </span>
-            </a>
+              {char}
+            </span>
+          ))}
+        </h1>
+
+        <div className="mt-10 grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-end">
+          <p className="text-2xl sm:text-3xl leading-snug text-balance max-w-2xl">
+            Building things at the intersection of{" "}
+            <span className="text-shimmer font-medium">finance</span> and{" "}
+            <span className="text-shimmer font-medium">code</span> — small,
+            sharp products between markets, software, and design.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-5">
+            <Magnetic>
+              <a
+                href="https://cal.com/tanishdhoot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 rounded-full border border-gold/60 bg-gold/10 px-7 py-3.5 font-mono text-xs uppercase tracking-caps text-gold hover:bg-gold hover:text-bg transition-colors duration-300"
+              >
+                <span>book 15 min</span>
+                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </a>
+            </Magnetic>
             <a
               href="#work"
-              className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-caps text-faint hover:text-gold transition-colors"
+              className="group font-mono text-xs uppercase tracking-caps text-muted hover:text-gold transition-colors"
             >
-              <span>View holdings</span>
-              <span className="text-gold transition-transform group-hover:translate-y-0.5">
+              view work{" "}
+              <span className="inline-block text-gold transition-transform duration-300 group-hover:translate-y-0.5">
                 ↓
               </span>
             </a>
           </div>
         </div>
+      </div>
 
-        {/* dispatch column */}
-        <aside className="lg:border-l lg:border-rule lg:pl-10">
-          <div className="border-y-2 border-ink py-1.5 flex items-center justify-between font-mono text-[10px] uppercase tracking-caps">
-            <span className="flex items-center gap-2 text-gold">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
-              Latest dispatch
-            </span>
-            <span className="text-faint">{now.updated}</span>
-          </div>
-          <p className="mt-5 text-xl leading-snug font-medium text-balance">
-            {now.text}
-          </p>
-
-          <div className="mt-8 rule-hair pt-5 space-y-3 font-mono text-[11px] uppercase tracking-caps text-faint">
-            <p className="flex justify-between">
-              <span>Desk</span>
-              <span className="text-ink">Pune, India</span>
-            </p>
-            <p className="flex justify-between">
-              <span>Beat</span>
-              <span className="text-ink">Fintech · Trading</span>
-            </p>
-            <p className="flex justify-between">
-              <span>Wire</span>
-              <a
-                href="mailto:tanish.dhoot98@gmail.com"
-                className="text-ink hover:text-gold transition-colors normal-case tracking-normal"
-              >
-                tanish.dhoot98@gmail.com
-              </a>
-            </p>
-          </div>
-        </aside>
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-caps text-muted/60 flex items-center gap-2">
+        <kbd className="border border-border rounded px-1.5 py-0.5">⌘K</kbd>
+        <span>command palette</span>
       </div>
     </section>
   );

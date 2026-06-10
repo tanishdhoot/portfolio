@@ -1,7 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Analytics } from "@vercel/analytics/react";
+import { Cursor } from "@/components/Cursor";
+import { CommandPalette } from "@/components/CommandPalette";
+import { Preloader } from "@/components/Preloader";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -13,7 +17,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL("https://tanishdoesdumbstuff.in"),
   title: {
-    default: "Tanish Dhoot — finance × code, printed from Pune",
+    default: "Tanish Dhoot — finance × code",
     template: "%s · Tanish Dhoot",
   },
   description:
@@ -37,7 +41,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#F6F0E3",
+  themeColor: "#050505",
   width: "device-width",
   initialScale: 1,
 };
@@ -48,9 +52,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${GeistMono.variable}`}>
-      <body className="font-serif bg-paper text-ink min-h-screen antialiased">
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable} ${fraunces.variable}`}
+    >
+      <body className="font-sans bg-bg text-ink min-h-screen antialiased grain">
+        <Preloader />
         {children}
+        <Cursor />
+        <CommandPalette />
         <Analytics />
       </body>
     </html>
