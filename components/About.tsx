@@ -20,7 +20,7 @@ export function About() {
         <div className="space-y-6">
           <Reveal delay={0.1}>
             <p className="text-lg leading-relaxed text-ink/85">
-              Full-stack engineer with a focus on fintech and algorithmic
+              Professional vibe coder with a focus on fintech and algorithmic
               trading. Previously at{" "}
               <span className="text-gold-bright">Smallcase</span>, helping
               shape how Indians invest. The family runs{" "}
