@@ -20,14 +20,22 @@ export function About() {
         <div className="space-y-6">
           <Reveal delay={0.1}>
             <p className="text-lg leading-relaxed text-ink/85">
-              Professional vibe coder with a focus on fintech and algorithmic
-              trading. Previously at{" "}
-              <span className="text-gold-bright">Smallcase</span>, helping
-              shape how Indians invest. The family runs{" "}
+              Finance and operations professional who builds. Previously at{" "}
+              <span className="text-gold-bright">Smallcase</span>, building
+              operations across mutual fund and LAMF workflows. CFA Level I
+              cleared, Level II scheduled August 2026. The family runs{" "}
               <span className="text-gold-bright">Dhoot Trading</span> — gold
               has been the household commodity for decades, so markets were a
               conversation long before they were a career.
             </p>
+          </Reveal>
+
+          <Reveal delay={0.15}>
+            <ul className="flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-caps text-muted">
+              <li className="rounded-full border border-gold/30 px-3 py-1 text-gold/90">
+                CFA Level I · Level II candidate (Aug 2026)
+              </li>
+            </ul>
           </Reveal>
 
           <Reveal delay={0.2}>

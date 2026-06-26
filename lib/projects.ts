@@ -46,9 +46,9 @@ export const projects: Project[] = [
   },
   {
     name: "Savour",
-    tagline: "Native Android app",
+    tagline: "Meal saving & discovery app",
     description:
-      "An Android app with a Vercel-hosted API backend. Built for mobile-first interactions and quick capture flows.",
+      "A meal saving and discovery app. Built mobile-first with quick capture flows for saving restaurants and dishes.",
     url: "https://github.com/tanishdhoot",
     stack: ["Android", "Kotlin", "REST API", "Vercel"],
     status: "wip",

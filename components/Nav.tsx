@@ -34,9 +34,6 @@ export function Nav() {
           <a href="#work" className="hover:text-gold transition-colors">
             work
           </a>
-          <a href="/blog" className="hover:text-gold transition-colors">
-            notes
-          </a>
           <a
             href="mailto:tanish.dhoot98@gmail.com"
             className="hover:text-gold transition-colors hidden sm:inline"

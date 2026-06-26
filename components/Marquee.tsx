@@ -1,4 +1,9 @@
 const ITEMS = [
+  "Operations",
+  "Strategy",
+  "Capital Markets",
+  "Equity Research",
+  "Fintech Ops",
   "TypeScript",
   "Next.js",
   "React",

@@ -33,13 +33,6 @@ export function CommandPalette() {
         },
       },
       {
-        label: "Read notes",
-        hint: "page",
-        action: () => {
-          window.location.href = "/blog";
-        },
-      },
-      {
         label: "Book 15 minutes",
         hint: "cal.com",
         action: () => window.open("https://cal.com/tanishdhoot", "_blank"),

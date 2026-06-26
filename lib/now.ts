@@ -5,7 +5,7 @@ export interface NowEntry {
 
 export const now: NowEntry = {
   text: "Shipping Axiom Alpha v1 — agent-based equity research for Indian markets.",
-  updated: "May 2026",
+  updated: "June 2026",
 };
 
 export const cal = {

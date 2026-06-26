@@ -7,7 +7,7 @@ interface SymbolConfig {
 const SYMBOLS: SymbolConfig[] = [
   { symbol: "%5ENSEI", label: "NIFTY 50", precision: 2 },
   { symbol: "%5EBSESN", label: "SENSEX", precision: 2 },
-  { symbol: "GOLDBEES.NS", label: "GOLD (₹)", precision: 2 },
+  { symbol: "GOLDBEES.NS", label: "GOLD ETF", precision: 2 },
   { symbol: "USDINR%3DX", label: "USD/INR", precision: 3 },
 ];
 
