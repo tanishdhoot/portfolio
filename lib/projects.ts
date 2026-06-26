@@ -9,15 +9,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "Axiom Alpha",
-    tagline: "AI stock research for Indian markets",
-    description:
-      "Equity research platform with reasoning agents modeled after Buffett, Graham, and Cathie Wood. Built around a dark, gold-leaf design system.",
-    url: "https://axiom.tanishdoesdumbstuff.in",
-    stack: ["Next.js", "TypeScript", "LLM agents", "Indian market data"],
-    status: "live",
-  },
-  {
     name: "HireCraft",
     tagline: "Freelance marketplace with sealed bidding",
     description:
@@ -42,6 +33,15 @@ export const projects: Project[] = [
       "A small-batch candle storefront: ritual-based collections, product pages, cart, and Stripe checkout, wrapped in minimalist, brand-led copy. A full e-commerce build end to end.",
     url: "https://slowburn-vert.vercel.app",
     stack: ["Next.js", "Stripe", "E-commerce", "Brand design"],
+    status: "live",
+  },
+  {
+    name: "Axiom Alpha",
+    tagline: "AI stock research for Indian markets",
+    description:
+      "Equity research platform with reasoning agents modeled after Buffett, Graham, and Cathie Wood. Built around a dark, gold-leaf design system.",
+    url: "https://axiom.tanishdoesdumbstuff.in",
+    stack: ["Next.js", "TypeScript", "LLM agents", "Indian market data"],
     status: "live",
   },
   {

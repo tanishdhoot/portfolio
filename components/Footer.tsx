@@ -66,9 +66,6 @@ export function Footer() {
           </div>
 
           <nav className="flex items-center gap-5">
-            <a href="/blog" className="hover:text-gold transition-colors">
-              notes
-            </a>
             <a
               href="https://github.com/tanishdhoot"
               target="_blank"

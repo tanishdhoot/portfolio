@@ -35,7 +35,7 @@ export function CommandPalette() {
       {
         label: "Book 15 minutes",
         hint: "cal.com",
-        action: () => window.open("https://cal.com/tanishdhoot", "_blank"),
+        action: () => window.open("https://cal.com/tanish-dhoot-cfgc0m/lets-connect", "_blank"),
       },
       {
         label: "GitHub",

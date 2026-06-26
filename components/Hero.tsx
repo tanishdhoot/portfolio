@@ -79,7 +79,7 @@ export function Hero() {
           <div className="flex flex-wrap items-center gap-5">
             <Magnetic>
               <a
-                href="https://cal.com/tanishdhoot"
+                href="https://cal.com/tanish-dhoot-cfgc0m/lets-connect"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 rounded-full border border-gold/60 bg-gold/10 px-7 py-3.5 font-mono text-xs uppercase tracking-caps text-gold hover:bg-gold hover:text-bg transition-colors duration-300"

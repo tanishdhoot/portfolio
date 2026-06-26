@@ -9,6 +9,6 @@ export const now: NowEntry = {
 };
 
 export const cal = {
-  url: "https://cal.com/tanishdhoot",
+  url: "https://cal.com/tanish-dhoot-cfgc0m/lets-connect",
   label: "book 15 min",
 };
