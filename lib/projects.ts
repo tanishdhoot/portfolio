@@ -36,6 +36,15 @@ export const projects: Project[] = [
     status: "live",
   },
   {
+    name: "Slowburn",
+    tagline: "Soy candle e-commerce — rituals for people who work too much",
+    description:
+      "A small-batch candle storefront: ritual-based collections, product pages, cart, and Stripe checkout, wrapped in minimalist, brand-led copy. A full e-commerce build end to end.",
+    url: "https://slowburn-vert.vercel.app",
+    stack: ["Next.js", "Stripe", "E-commerce", "Brand design"],
+    status: "live",
+  },
+  {
     name: "Netflix Portfolio",
     tagline: "A personal digital CV — Netflix style",
     description:
