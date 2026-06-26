@@ -1,0 +1,2 @@
+# Normalize line endings: Git stores LF, checks out native on each OS.
+* text=auto eol=lf
